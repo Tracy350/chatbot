@@ -38,7 +38,7 @@ class _ChatscreenState extends State<Chatscreen> {
       if (response.statusCode == 200) {
         print("Request successful");
         final data = jsonDecode(response.body);
-        final botReply = data["response"];
+        final botReply = data["reply"];
 
         setState(() {
           messages.add({"text": botReply, "isUser": false});
